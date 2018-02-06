@@ -3,8 +3,8 @@ console.log('Running any-mask ...');
 const isMaskedKeyName = 'isAnyMaskEnabled';
 const maskEnabledClassName = 'any-mask-enabled';
 const blurCss = 'filter: blur(5px);';
-const textToBlur = 'google';
-const regex = new RegExp(textToBlur, 'gi');
+const textToMask = 'google';
+const regex = new RegExp(textToMask, 'gi');
 const sensitiveDataClassName = 'anymask-sensitive';
 
 // add CSS style to blur
@@ -33,8 +33,8 @@ Array.from(document.body.querySelectorAll('*'))
 
 function checkForMatch(e) {
   return (
-    (e.innerHTML && e.innerHTML.toLowerCase().indexOf(textToBlur.toLowerCase()) > -1) ||
-    (e.value && e.value.toLowerCase().indexOf(textToBlur.toLowerCase()) > -1)
+    (e.innerHTML && e.innerHTML.toLowerCase().indexOf(textToMask.toLowerCase()) > -1) ||
+    (e.value && e.value.toLowerCase().indexOf(textToMask.toLowerCase()) > -1)
   );
 }
 
